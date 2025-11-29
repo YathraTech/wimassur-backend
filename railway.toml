@@ -1,0 +1,15 @@
+[build]
+builder = "nixpacks"
+buildCommand = "npm ci && npm run build"
+
+[deploy]
+startCommand = "npm run start"
+healthcheckPath = "/"
+healthcheckTimeout = 300
+restartPolicyType = "on-failure"
+restartPolicyMaxRetries = 3
+
+[variables]
+NODE_ENV = "production"
+HOST = "0.0.0.0"
+PORT = "1337"
