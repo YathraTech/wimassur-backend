@@ -9,6 +9,8 @@ console.log('API_TOKEN_SALT exists:', !!process.env.API_TOKEN_SALT);
 console.log('JWT_SECRET exists:', !!process.env.JWT_SECRET);
 console.log('APP_KEYS exists:', !!process.env.APP_KEYS);
 console.log('DATABASE_URL exists:', !!process.env.DATABASE_URL);
+console.log('DATABASE_URL value:', process.env.DATABASE_URL?.substring(0, 30) + '...');
+console.log('DATABASE_CLIENT:', process.env.DATABASE_CLIENT);
 console.log('=====================================');
 
 export default {
